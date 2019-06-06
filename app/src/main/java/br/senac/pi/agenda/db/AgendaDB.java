@@ -14,12 +14,15 @@ public class AgendaDB extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onCreate(SQLiteDatabase sqLiteDatabase) {
-
+    public void onCreate(SQLiteDatabase db) {
+        String sql = "CREATE TABLE contato (id integer primary key autoincrement," +
+                "nome text," +
+                "email text)";
+        db.execSQL(sql);
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+    public void onUpgrade(SQLiteDatabase db, int dbVersaoAnterior, int dbNovaVersao) {
 
     }
 }
