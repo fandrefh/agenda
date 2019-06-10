@@ -4,4 +4,6 @@
     <string name="label_nome">Nome</string>
     <string name="label_email">E-mail</string>
     <string name="label_botao">Cadastrar</string>
+    <string name="cadastro_sucesso">Cadastro realizado com sucesso</string>
+    <string name="cadastro_erro">Erro no cadastro</string>
 </resources>
