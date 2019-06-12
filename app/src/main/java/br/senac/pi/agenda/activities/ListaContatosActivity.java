@@ -3,8 +3,11 @@ package br.senac.pi.agenda.activities;
 import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
+import android.widget.Toast;
 
 import br.senac.pi.agenda.R;
 import br.senac.pi.agenda.controllers.ContatoController;
@@ -19,6 +22,7 @@ public class ListaContatosActivity extends AppCompatActivity {
         setContentView(R.layout.activity_lista_contatos);
 
         lvContatos = findViewById(R.id.lvContatos);
+        lvContatos.setOnItemClickListener(getContatoId());
 
         carregaContatos();
     }
@@ -36,5 +40,15 @@ public class ListaContatosActivity extends AppCompatActivity {
                 txtViews // Views/TextViews que serão usadas para exibir a lista na tela
         );
         lvContatos.setAdapter(adaptador);
+    }
+
+    private AdapterView.OnItemClickListener getContatoId() {
+        return new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int posicao, long id) {
+                Toast.makeText(ListaContatosActivity.this,
+                        "Cliquei no item: " + posicao + " - ID: " + id, Toast.LENGTH_LONG).show();
+            }
+        };
     }
 }

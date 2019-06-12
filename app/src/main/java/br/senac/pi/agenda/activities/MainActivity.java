@@ -48,6 +48,9 @@ public class MainActivity extends AppCompatActivity {
 
                 if (contatoController.inserirContato(nomeTela, emailTela)) {
                     mostrarMensagem(getString(R.string.cadastro_sucesso));
+                    edtNome.setText("");
+                    edtEmail.setText("");
+                    edtNome.requestFocus();
                 } else {
                     mostrarMensagem(getString(R.string.cadastro_erro));
                 }
