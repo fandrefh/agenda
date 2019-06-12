@@ -15,7 +15,7 @@ public class AgendaDB extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String sql = "CREATE TABLE contato (id integer primary key autoincrement," +
+        String sql = "CREATE TABLE contatos (_id integer primary key autoincrement," +
                 "nome text," +
                 "email text)";
         db.execSQL(sql);

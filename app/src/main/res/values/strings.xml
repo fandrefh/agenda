@@ -6,4 +6,5 @@
     <string name="label_botao">Cadastrar</string>
     <string name="cadastro_sucesso">Cadastro realizado com sucesso</string>
     <string name="cadastro_erro">Erro no cadastro</string>
+    <string name="listar_contatos">Listar contatos</string>
 </resources>

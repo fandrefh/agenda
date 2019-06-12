@@ -2,6 +2,7 @@ package br.senac.pi.agenda.controllers;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import br.senac.pi.agenda.db.AgendaDB;
@@ -26,7 +27,7 @@ public class ContatoController {
         valores.put("nome", nome);
         valores.put("email", email);
 
-        resultado = db.insert("contato", null, valores);
+        resultado = db.insert("contatos", null, valores);
         db.close();
 
         if (resultado == -1) {
@@ -34,5 +35,19 @@ public class ContatoController {
         } else {
             return true;
         }
+    }
+
+    public Cursor listarContatos() {
+        Cursor listaDados;
+        db = agendaDB.getReadableDatabase();
+        String[] campos = {"_id", "nome", "email"};
+        listaDados = db.query("contatos", campos, null, null, null, null, null);
+
+        if (listaDados != null) {
+            listaDados.moveToFirst();
+        }
+
+        db.close();
+        return listaDados;
     }
 }

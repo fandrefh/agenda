@@ -1,5 +1,6 @@
 package br.senac.pi.agenda.activities;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,6 +24,18 @@ public class MainActivity extends AppCompatActivity {
         edtEmail = findViewById(R.id.edtEmail);
 
         findViewById(R.id.btnCadastrar).setOnClickListener(cadastrar());
+        findViewById(R.id.btnListarContatos).setOnClickListener(listarContatos());
+    }
+
+    public View.OnClickListener listarContatos() {
+        return new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent activityListaContatos = new Intent(MainActivity.this,
+                        ListaContatosActivity.class);
+                startActivity(activityListaContatos);
+            }
+        };
     }
 
     private View.OnClickListener cadastrar() {
