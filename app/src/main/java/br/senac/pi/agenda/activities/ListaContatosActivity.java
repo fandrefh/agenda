@@ -1,5 +1,6 @@
 package br.senac.pi.agenda.activities;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -48,7 +49,13 @@ public class ListaContatosActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int posicao, long id) {
                 Toast.makeText(ListaContatosActivity.this,
                         "Cliquei no item: " + posicao + " - ID: " + id, Toast.LENGTH_LONG).show();
+
+                Intent editarContatoActivity = new Intent(ListaContatosActivity.this,
+                        EditarContatoActivity.class);
+                editarContatoActivity.putExtra("idContato", String.valueOf(id));
+                startActivity(editarContatoActivity);
             }
+
         };
     }
 }

@@ -50,4 +50,20 @@ public class ContatoController {
         db.close();
         return listaDados;
     }
+
+    public Cursor pegarContatoPorId(int id) {
+        Cursor contato;
+
+        String[] campos = {"_id", "nome", "email"};
+        String where = "_id" + "=" + id;
+        db = agendaDB.getReadableDatabase();
+        contato = db.query("contatos", campos, where, null, null, null,
+                null);
+
+        if (contato != null) {
+            contato.moveToFirst();
+        }
+        db.close();
+        return contato;
+    }
 }

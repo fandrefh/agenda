@@ -7,4 +7,7 @@
     <string name="cadastro_sucesso">Cadastro realizado com sucesso</string>
     <string name="cadastro_erro">Erro no cadastro</string>
     <string name="listar_contatos">Listar contatos</string>
+    <string name="titulo_editar_cadastro">Editar Cadastro</string>
+    <string name="label_atualizar_contato">Atualizar</string>
+    <string name="label_deletar_contato">Deletar</string>
 </resources>
