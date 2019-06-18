@@ -10,4 +10,6 @@
     <string name="titulo_editar_cadastro">Editar Cadastro</string>
     <string name="label_atualizar_contato">Atualizar</string>
     <string name="label_deletar_contato">Deletar</string>
+    <string name="atualizar_sucesso">Contato atualizado com sucesso</string>
+    <string name="deletar_sucesso">Contado deletado com sucesso</string>
 </resources>

@@ -80,6 +80,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:text="@string/label_deletar_contato"
+        android:textColor="@color/deletar_contato"
         app:layout_constraintBaseline_toBaselineOf="@+id/btnAtualizarContato"
         app:layout_constraintStart_toEndOf="@+id/btnAtualizarContato" />
 </android.support.constraint.ConstraintLayout>

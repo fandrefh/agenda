@@ -66,4 +66,24 @@ public class ContatoController {
         db.close();
         return contato;
     }
+
+    public void atualizarContato(int id, String nome, String email) {
+        ContentValues valores = new ContentValues();
+        String where = "_id" + "=" + id;
+
+        db = agendaDB.getWritableDatabase();
+
+        valores.put("nome", nome);
+        valores.put("email", email);
+
+        db.update("contatos", valores, where, null);
+        db.close();
+    }
+
+    public void deleteContato(int id) {
+        String where = "_id" + "=" + id;
+        db = agendaDB.getWritableDatabase();
+        db.delete("contatos", where, null);
+        db.close();
+    }
 }

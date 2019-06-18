@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Agenda</string>
+    <string name="titulo_agenda">New Contact</string>
+    <string name="label_nome">Name</string>
+    <string name="label_email">E-mail</string>
+    <string name="label_botao">Save</string>
+    <string name="cadastro_sucesso">Successful registration</string>
+    <string name="cadastro_erro">Registration error</string>
+    <string name="listar_contatos">Contact list</string>
+    <string name="titulo_editar_cadastro">Contact edit</string>
+    <string name="label_atualizar_contato">Update</string>
+    <string name="label_deletar_contato">Delete</string>
+    <string name="atualizar_sucesso">Registration updated</string>
+    <string name="deletar_sucesso">Registration deleted</string>
+</resources>
